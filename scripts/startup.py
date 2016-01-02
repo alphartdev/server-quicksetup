@@ -28,10 +28,8 @@ print bcolors.UNDERLINE + "Local date: " + bcolors.ENDC + bcolors.OKBLUE + time.
 # Let's ping servers
 servers=[]
 for line in open("/etc/startupscript/hosts", 'r'):
-	print line
 	if len(line) > 0 and line[0] == "#":
 		continue
-	print line
 	servers.append((line.split(':')[0], line.split(':')[1][:-1]))
 print bcolors.UNDERLINE + "Servers state:" + bcolors.ENDC
 for server in servers:

@@ -28,4 +28,14 @@ cp scripts/startup.py /etc/startupscript/
 echo "# Host to be pinged at startup, format: name:ip" > /etc/startupscript/hosts
 defprint "Please configure the hosts to be pinged at login in /etc/startupscript/hosts"
 
+while true; do
+    read -p "Should we delete /etc/motd (warranty notic most of the time)?" yn
+        case $yn in
+	        [Yy]* ) echo "" >> /etc/motd; break;;
+		[Nn]* ) exit;;
+	        * ) echo "Please answer yes or no.";;
+	esac
+done
+
+
 defprint "${RED}Installation completed!"
