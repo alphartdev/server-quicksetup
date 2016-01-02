@@ -31,7 +31,7 @@ defprint "Please configure the hosts to be pinged at login in /etc/startupscript
 while true; do
     read -p "Should we delete /etc/motd (warranty notic most of the time)?" yn
         case $yn in
-	        [Yy]* ) echo "" >> /etc/motd; break;;
+	        [Yy]* ) echo "" > /etc/motd; break;;
 		[Nn]* ) exit;;
 	        * ) echo "Please answer yes or no.";;
 	esac
