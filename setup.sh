@@ -13,7 +13,7 @@ defprint "${RED}Starting server quick setup..."
 read -p "What's this server name?" name
 
 defprint "Setting up misc packages..."
-apt-get -y install python python-pip iftop
+apt-get -y install python python-pip iftop fail2ban
 
 defprint "Setting preferences (vi and others)"
 cp default/vimrc.local /etc/vim/vimrc.local
